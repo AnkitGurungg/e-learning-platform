@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
-    <artifactId>jpa</artifactId>
+    <artifactId>e-learning-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jpa</name>
-    <description>jpa</description>
+    <name>e-learning-platform</name>
+    <description>E-Learning-Platform</description>
     <url/>
     <licenses>
         <license/>
