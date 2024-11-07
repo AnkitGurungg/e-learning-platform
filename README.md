@@ -15,6 +15,12 @@
 - #### Different types of generation strategies
 ![Pic not found](diagrams/different-types-of-generation-strategies.png)
 
+- #### Use JpaRepository to implement dao layer to interact with database and abstract data access layer from business logic
+![Pic not found](diagrams/use-jpa-repository-to-implement-dao-layer-to-interact-with-database-and-abstract-data-access-layer-from-business-logic.png)
+
+- #### Hierarchy of JpaRepository 
+![Pic not found](diagrams/hierarchy-of-jpa-repository.png)
+
 - #### Install-PostgreSQL using docker
 ![Pic not found](diagrams/install-postgresql-using-docker.png)
 
