@@ -21,6 +21,9 @@
 - #### Hierarchy of JpaRepository 
 ![Pic not found](diagrams/hierarchy-of-jpa-repository.png)
 
+- #### Hibernate Entity Lifecycle
+![Pic not found](diagrams/hibernate-entity-lifecycle.png)
+
 - #### Install-PostgreSQL using docker
 ![Pic not found](diagrams/install-postgresql-using-docker.png)
 
