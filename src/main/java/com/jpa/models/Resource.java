@@ -1,8 +1,6 @@
 package com.jpa.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,5 +22,10 @@ public class Resource {
     private int size;
 
     private String url;
+
+    // When a new lecture or new resource is created, need to link both of them together to have bidirectional relationship (standard bidirectional approach is mappedBy on inverse side)
+    @OneToOne
+    @JoinColumn(name = "lecture_id")
+    private Lecture lecture;
 
 }
