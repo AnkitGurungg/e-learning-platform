@@ -1,15 +1,12 @@
 package com.jpa.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -61,4 +58,11 @@ public class Author {
     private String email;
 
     private Integer age;
+
+    @ManyToMany(
+            mappedBy = "authors"
+    )
+    private List<Course> courses;
+    // this inverse side does not have foreign keys in the joint table
+
 }
