@@ -24,7 +24,7 @@ public class Course {
     private String description;
 
     @ManyToMany
-    // joint table for author and courses
+    // Joint table for author and courses
     @JoinTable(
             name = "authors_courses",
             joinColumns = {
@@ -34,7 +34,13 @@ public class Course {
                     @JoinColumn(name = "author_id")
             }
     )
-    // this owner side is responsible for managing, updating the joint table and maintaining the foreign key values in joint table and can define multiple join columns
+    // This owner side is responsible for managing, updating the joint table and maintaining the foreign key values in joint table and can define multiple join columns
     private List<Author> authors;
+
+    // Inverse side - one course (current object) can have many sections (create a list when many comes)
+    @OneToMany(
+            mappedBy = "course"
+    )
+    private List<Section> sections;
 
 }
