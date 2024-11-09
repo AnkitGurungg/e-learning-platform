@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,9 +26,11 @@ public class Section {
 
     // Owner side - many sections belong to one course and when many-to-one is used, specify join column
     @ManyToOne
-    @JoinColumn(
-            name = "course_id"
-    )
+    @JoinColumn(name = "course_id")
     private Course course;
+
+
+    @OneToMany(mappedBy = "section")
+    private List<Lecture> lectures;
 
 }
