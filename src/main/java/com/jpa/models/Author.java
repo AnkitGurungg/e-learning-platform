@@ -1,23 +1,19 @@
 package com.jpa.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
 //@Table(name = "AUTHOR_TBL")
-public class Author {
-
-    @Id
-    @GeneratedValue
+public class Author extends BaseEntity {
 
     /*@GeneratedValue(
             strategy = GenerationType.SEQUENCE,
@@ -41,7 +37,11 @@ public class Author {
             generator = "author_id_gen"
     )*/
 
+    /*
+    @Id
+    @GeneratedValue
     private Integer id;
+    */
 
     @Column(
             name = "f_name",
@@ -63,6 +63,6 @@ public class Author {
             mappedBy = "authors"
     )
     private List<Course> courses;
-    // this inverse side does not have foreign keys in the joint table
+    // This inverse side does not have foreign keys in the joint table
 
 }

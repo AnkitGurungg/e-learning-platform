@@ -2,7 +2,6 @@ package com.jpa;
 
 import com.jpa.models.Author;
 import com.jpa.repositories.AuthorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,8 +14,7 @@ public class ELearningPlatformApplication {
         SpringApplication.run(ELearningPlatformApplication.class, args);
     }
 
-    @Bean
-    @Autowired
+//    @Bean
     public CommandLineRunner commandLineRunner(
             AuthorRepository repository
     ) {

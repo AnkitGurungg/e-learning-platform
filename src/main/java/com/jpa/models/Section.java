@@ -1,24 +1,24 @@
 package com.jpa.models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
-public class Section {
-
-    @Id
-    @GeneratedValue
-    private Integer id;
+public class Section extends BaseEntity {
 
     private String name;
 
@@ -28,7 +28,6 @@ public class Section {
     @ManyToOne
     @JoinColumn(name = "course_id")
     private Course course;
-
 
     @OneToMany(mappedBy = "section")
     private List<Lecture> lectures;
