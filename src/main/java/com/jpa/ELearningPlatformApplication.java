@@ -34,6 +34,7 @@ public class ELearningPlatformApplication {
             var video = Video.builder()
                     .name("abc")
                     .size(5)
+                    .length(10)
                     .build();
             videoRepository.save(video);
         };
