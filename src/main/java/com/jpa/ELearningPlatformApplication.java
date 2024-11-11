@@ -1,7 +1,8 @@
 package com.jpa;
 
-import com.jpa.models.Author;
+import com.jpa.models.Video;
 import com.jpa.repositories.AuthorRepository;
+import com.jpa.repositories.VideoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,11 +15,13 @@ public class ELearningPlatformApplication {
         SpringApplication.run(ELearningPlatformApplication.class, args);
     }
 
-//    @Bean
+    @Bean
     public CommandLineRunner commandLineRunner(
-            AuthorRepository repository
+            AuthorRepository repository,
+            VideoRepository videoRepository
     ) {
         return args -> {
+            /*
             var author = Author.builder()
                     .firstName("Ankit")
                     .lastName("Gurung")
@@ -26,6 +29,13 @@ public class ELearningPlatformApplication {
                     .email("ankitgurung@gmail.com")
                     .build();
             repository.save(author);
+            */
+
+            var video = Video.builder()
+                    .name("abc")
+                    .size(5)
+                    .build();
+            videoRepository.save(video);
         };
     }
 
