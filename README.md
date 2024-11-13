@@ -27,6 +27,9 @@
 - #### Use inheritance on common field having entity classes by creating BaseEntity class to avoid code duplication
 ![Pic not found](diagrams/use-inheritance-on-common-field-having-entity-classes-by-creating-baseentity-class-to-avoid-code-duplication.png)
 
+- #### Use Embeddable and EmbeddedId to define composite primary key
+![Pic not found](diagrams/use-embeddable-embeddedid-to-define-composite-primary-key.png)
+
 - #### Install-PostgreSQL using docker
 ![Pic not found](diagrams/install-postgresql-using-docker.png)
 
