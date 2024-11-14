@@ -70,6 +70,10 @@ E-learning platform is designed to facilitate the management and delivery of edu
 ![Pic not found](docs/diagrams/use-embeddable-embeddedid-to-define-composite-primary-key.png)
 </br>
 
+#### Use Spring Data JPA to dynamically generate query generation or derived query at the run time
+![Pic not found](docs/diagrams/use-spring-data-jpa-to-dynamically-generate-query-generation-or-derived-query-at-the-runtime.png)
+</br>
+
 #### Install-PostgreSQL using docker
 ![Pic not found](docs/diagrams/install-postgresql-using-docker.png)
 </br>
