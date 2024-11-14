@@ -2,12 +2,14 @@ package com.jpa;
 
 import com.github.javafaker.Faker;
 import com.jpa.models.Author;
+import com.jpa.models.specification.AuthorSpecification;
 import com.jpa.repositories.AuthorRepository;
 import com.jpa.repositories.VideoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.domain.Specification;
 
 @SpringBootApplication
 public class ELearningPlatformApplication {
@@ -47,7 +49,7 @@ public class ELearningPlatformApplication {
 //            repository.updateAuthor(22, 1);
 
 //            update all authors
-            repository.updateAllAuthors(99);
+//            repository.updateAllAuthors(99);
 
             /*
 //            Save Author object
@@ -69,6 +71,10 @@ public class ELearningPlatformApplication {
                     .build();
             videoRepository.save(video);
             */
+
+//            repository.findByNamedQuery(70).forEach(System.out::println);
+
+            repository.updateByNamedQuery(12);
         };
     }
 
