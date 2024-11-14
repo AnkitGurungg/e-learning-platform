@@ -74,7 +74,13 @@ public class ELearningPlatformApplication {
 
 //            repository.findByNamedQuery(70).forEach(System.out::println);
 
-            repository.updateByNamedQuery(12);
+//            repository.updateByNamedQuery(12);
+
+            Specification<Author> spec = Specification
+                    .where(AuthorSpecification.hasAge(22))
+                    .or(AuthorSpecification.firstNameLike("i"))
+                    ;
+            repository.findAll(spec).forEach(System.out::println);
         };
     }
 
