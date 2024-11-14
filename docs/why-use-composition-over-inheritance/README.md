@@ -1,0 +1,2 @@
+## Why use composition over inheritance ?
+Composition over inheritance because it is flexible and easier to change but both are ways to achieve code reusability and modularity in OOP. Composition evolves creating a class that has reference to one or more subject and delegates or assigns tasks to these subjects which allows to combine the functionality of multiple classes into a single class without the inheritance hierarchy of a base and subclass. It is more flexible because the object can be changed that a class delegates without affecting the class itself

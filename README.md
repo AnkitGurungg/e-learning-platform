@@ -1,53 +1,112 @@
-# e-learning-platform
+# E-learning-platform
+***
 
-- #### Database Class Diagram
-![Pic not found](diagrams/database-class-diagram.png)
+## Table of Contents
+- ### [Overview](#overview)
+- ### [Features](#features)
+- ### [Diagrams](#diagrams)
+- ### [Technologies Used](#technologies-used)
+- ### [Learning Objectives](#learning-objectives)
+- ### [Get Started](#get-started)
+- ### [Documentation](#documentation)
+***
 
-- #### Transform database table to java class
-![Pic not found](diagrams/transform-database-table-to-java-class.png)
+## Overview
+E-learning platform is designed to facilitate the management and delivery of educational content. It provides key functionalities for managing authors, lectures, sections, course and resources, including files, videos, and text. The system is built to support an organized structure for educational courses, enabling easy access to various types of resources.
+***
 
-- #### Difference between Hibernate and Spring Data JPA
-![Pic not found](diagrams/difference-between-hibernate-and-spring-data-jpa.png)
+## Features:
+- Author Management: Allows the creation and management of authors who can contribute educational content.
+- Lecture Management: Organizes lectures under specific courses.
+- Section Management: Courses are divided into sections for better navigation and progression.
+- Course Resources: Supports various types of course materials, including
+  - Files: Attach supplementary resources.
+  - Videos: Embed or link video content for lectures.
+  - Text: Provide text-based resources for in-depth learning.
+***
 
-- #### Difference between Hibernate and Spring Data JPA
-![Pic not found](diagrams/difference-between-hibernate-and-spring-data-jpa.png)
+## Diagrams
+#### Database Class Diagram
+![Pic not found](docs/diagrams/database-class-diagram.png)
+</br>
+</br>
 
-- #### Different types of generation strategies
-![Pic not found](diagrams/different-types-of-generation-strategies.png)
+#### Transform database table to java class
+![Pic not found](docs/diagrams/transform-database-table-to-java-class.png)
+</br>
+</br>
 
-- #### Use JpaRepository to implement dao layer to interact with database and abstract data access layer from business logic
-![Pic not found](diagrams/use-jpa-repository-to-implement-dao-layer-to-interact-with-database-and-abstract-data-access-layer-from-business-logic.png)
+#### Difference between Hibernate and Spring Data JPA
+![Pic not found](docs/diagrams/difference-between-hibernate-and-spring-data-jpa.png)
+</br>
+</br>
 
-- #### Hierarchy of JpaRepository 
-![Pic not found](diagrams/hierarchy-of-jpa-repository.png)
+#### Different types of generation strategies
+![Pic not found](docs/diagrams/different-types-of-generation-strategies.png)
+</br>
+</br>
 
-- #### Hibernate Entity Lifecycle
-![Pic not found](diagrams/hibernate-entity-lifecycle.png)
+#### Use JpaRepository to implement dao layer to interact with database and abstract data access layer from business logic
+![Pic not found](docs/diagrams/use-jpa-repository-to-implement-dao-layer-to-interact-with-database-and-abstract-data-access-layer-from-business-logic.png)
+</br>
+</br>
 
-- #### Use inheritance on common field having entity classes by creating BaseEntity class to avoid code duplication
-![Pic not found](diagrams/use-inheritance-on-common-field-having-entity-classes-by-creating-baseentity-class-to-avoid-code-duplication.png)
+#### Hierarchy of JpaRepository 
+![Pic not found](docs/diagrams/hierarchy-of-jpa-repository.png)
+</br>
+</br>
 
-- #### Use Embeddable and EmbeddedId to define composite primary key
-![Pic not found](diagrams/use-embeddable-embeddedid-to-define-composite-primary-key.png)
+#### Hibernate Entity Lifecycle
+![Pic not found](docs/diagrams/hibernate-entity-lifecycle.png)
+</br>
+</br>
 
-- #### Install-PostgreSQL using docker
-![Pic not found](diagrams/install-postgresql-using-docker.png)
+#### Use inheritance on common field having entity classes by creating BaseEntity class to avoid code duplication
+![Pic not found](docs/diagrams/use-inheritance-on-common-field-having-entity-classes-by-creating-baseentity-class-to-avoid-code-duplication.png)
+</br>
+</br>
 
-- #### Install MySQL using docker
-![Pic not found](diagrams/install-mysql-using-docker.png)
+#### Use Embeddable and EmbeddedId to define composite primary key
+![Pic not found](docs/diagrams/use-embeddable-embeddedid-to-define-composite-primary-key.png)
+</br>
 
-## Entity relationship types in JPA:
--Unidirectional relationship</br>
--Bidirectional relationship
+#### Install-PostgreSQL using docker
+![Pic not found](docs/diagrams/install-postgresql-using-docker.png)
+</br>
+</br>
 
-## Ways to implement Inheritance in JPA:
-#### - Single Table strategy (default)
-Use single table strategy in JPA/Hibernate to implement inheritance hierarchy to entities to a single database table where discriminator column is used to determine which subclass a particular row belongs to.
+#### Install MySQL using docker
+![Pic not found](docs/diagrams/install-mysql-using-docker.png)
+</br>
+</br>
+***
 
-#### - Joint Table Strategy
-Use joint table strategy in JPA/Hibernate to implement inheritance hierarchy where each subclass is mapped to a separate table with a foreign key pointing to base table with only the properties that are specified to that subclass.
+## Technologies Used
+- Spring Boot 3
+- Spring Data JPA
+- Spring Validation
+- Docker
+- PostgreSQL
+- MySQL
+- Git & GitHub
+***
 
-#### - Table per Class Strategy
-Use table per class strategy in JPA/Hibernate to implement inheritance hierarchy where each class will have its own table with a copy of all the properties inherited from base class.
+## Learning Objectives
+- Designing a class diagram from business requirements
+- Utilizing inheritance with Spring Data JPA
+- Object validation using Spring Validation
+- Using Spring Profiles for environment-specific configurations
+- Implementing business requirements and handling business exceptions
+***
 
-#### (Composition over inheritance because it is flexible and easier to change but both are ways to achieve code reusability and modularity in OOP. Composition evolves creating a class that has reference to one or more subject and delegates or assigns tasks to these subjects which allows to combine the functionality of multiple classes into a single class without the inheritance hierarchy of a base and subclass. It is more flexible because the object can be changed that a class delegates without affecting the class itself)
+## Get Started
+To get started with the e-learning platform project, follow the given setup instructions respectively
+- Clone this repository.
+- Configure your database (PostgreSQL or MySQL) settings in the application properties.
+- Run the application using your preferred IDE or build tools.
+***
+
+## Documentation
+- [Entity relationship types in JPA](docs/entity-relationship-types-in-jpa/README.md)
+- [Ways to implement Inheritance in JPA](docs/ways-to-implement-inheritance-in-jpa/README.md)
+- [Why use composition over inheritance](docs/why-use-composition-over-inheritance/README.md)
